@@ -233,11 +233,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h5>profile information</h5>
 				<form action="index.html" method="post" id="registerForm">
 					<input type="text" placeholder="First Name..." id="nom" >
-					<p class="NoRequired"></p>
+					<div id="NoRequired"></div>
 					<input type="text" placeholder="Last Name..." id="prenom" >
+					<div class="invalid-feedback" id="pre"></div>
 					<input type="text" placeholder="Email Address" id="mail" >
+					<div id="mailReq"></div>
 					<input type="password" placeholder="Password"  id="password">
+					<div id="passReq"></div>
 					<input type="password" placeholder="Password Confirmation" id="confirmationPassword" >
+					<div id="confirmReq"></div>
 					<div class="register-check-box">
 							<div class="check">
 								<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
