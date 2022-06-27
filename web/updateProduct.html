@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpDate Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+</head>
+<body onload="showData()">
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html">Products</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="register">
+		<div class="container">
+			<h2 class="text-center mt-4">UpDate Product</h2>
+			<div class="login-form-grids">
+				<h5 class='text-center mt-2'>product information</h5>
+				<form  class="form-control" action="index.html" method="post" id="form">
+					<input type="file" class="form-control mt-2" placeholder="" id="photo" >
+                    <img  id="base64" src="" alt="">
+					<div id="photoReq"></div>
+					<input type="text" class="form-control mt-2" placeholder="Product Name" id="productName" >
+					<div class="" id="NameReq"></div>
+					<input type="number" class="form-control mt-3" placeholder="Product number" id="productQuantity" >
+					<div id="numberReq"></div>
+                    <div class="input-group mt-2">
+                        <input type="number"  class="form-control " placeholder="Product Price"  id="productPrice">
+                        <span class="input-group-text">$</span>
+                        <div id="priceReq"></div>
+                        
+                      </div>
+					<div id="passReq"></div>
+                    <div class="mt-2">
+                        <select class="form-select" id="category" aria-label="Default select example">
+                            <option selected disabled value="category" >Category</option>
+                            <option value="Groceries">Groceries</option>
+                            <option value="Household">Household</option>
+                            <option value="TPersonal Care">TPersonal Care</option>
+                            <option value="Package Food">Package Food</option>
+                            <option value="Beverages">Beverages</option>
+                          </select>
+                    </div>
+				</form>
+				<div class="">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-primary form-control mt-5 " id="btn"><strong>UPDATE</strong></button>
+		</div>
+	</div>
+    <script src="./js/updateProduct.js"></script>
+    
+</body>
+</html>
