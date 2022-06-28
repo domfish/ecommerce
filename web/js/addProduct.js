@@ -103,7 +103,7 @@ function loadCategories(){
         cat.innerHTML+=`
         <option value="${category.id}">${category.nameOfCategory}</option>                   
         `
-        console.log(category.nameOfCategory);
+        // console.log(category.nameOfCategory);
     })
 }
 
