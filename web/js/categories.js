@@ -4,8 +4,9 @@ function list() {
     categories.map((category, index) => {
         tbody.innerHTML += `
     <tr>
-    <td scope="col">${category.NameOfCategory}</td>
-    <td scope="col">${category.DescriptionOfCategory}</td>
+    <td scope="col">${category.id}</td>
+    <td scope="col">${category.nameOfCategory}</td>
+    <td scope="col">${category.descriptionOfCategory}</td>
     <td scope="col"><button class="btn btn-outline-info" onclick="ToUpdate(${index})"  type="button">update</button>
     <button class="btn btn-outline-danger" type="button" onclick="removeCategory(${index})"  id="delete">delete</button>
     </td>
@@ -23,5 +24,5 @@ function removeCategory(index) {
 }
 function ToUpdate(index) {
     localStorage.setItem('upDateCategoryIndex', JSON.stringify(index))
-    window.open('upDateCategory.html')
+    location.href='upDateCategory.html'
 }

@@ -34,8 +34,9 @@ btn.addEventListener('click', (e)=>{
     if (hasError == false) {
         var categories = JSON.parse(localStorage.getItem('categories') || '[]')
         var categoryData = {
-            NameOfCategory : category.value,
-            DescriptionOfCategory : area.value,
+            id:Date.now(),
+            nameOfCategory : category.value,
+            descriptionOfCategory : area.value,
         }
         categories.push(categoryData);
         localStorage.setItem('categories',JSON.stringify(categories))

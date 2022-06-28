@@ -7,8 +7,8 @@ const btn=document.getElementById('btn')
 function showData(){
     var index=JSON.parse(localStorage.getItem('upDateCategoryIndex')|| '')
     var categories = JSON.parse(localStorage.getItem('categories') || '[]')
-    category.value =categories[index].NameOfCategory
-    area.value =categories[index].DescriptionOfCategory
+    category.value =categories[index].nameOfCategory
+    area.value =categories[index].descriptionOfCategory
 }
 btn.addEventListener('click', (e)=>{
     
@@ -41,8 +41,9 @@ btn.addEventListener('click', (e)=>{
         var categories = JSON.parse(localStorage.getItem('categories') || '[]')
         var index=JSON.parse(localStorage.getItem('upDateCategoryIndex')|| '')
         var categoryData = {
-            NameOfCategory : category.value,
-            DescriptionOfCategory : area.value,
+            id:categories[index].id,
+            nameOfCategory : category.value,
+            descriptionOfCategory : area.value,
         }
         categories.splice(index,1,categoryData);
         localStorage.setItem('categories',JSON.stringify(categories))

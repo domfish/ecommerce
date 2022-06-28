@@ -99,4 +99,15 @@ btn.addEventListener('click',async (e) =>{
     }
     
 })
+// load function to show categiries in select
 
+function loadCategories(){
+    var categories=JSON.parse(localStorage.getItem('categories') || '[]')
+    categories.map(category=>{
+        const cat=document.getElementById('category')
+        cat.innerHTML+=`
+        <option value="${category.nameOfCategory}">${category.nameOfCategory}</option>                   
+        `
+        console.log(category.nameOfCategory);
+    })
+}

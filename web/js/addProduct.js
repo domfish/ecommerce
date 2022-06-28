@@ -81,6 +81,7 @@ btn.addEventListener('click',async (e) =>{
 
         var products =JSON.parse(localStorage.getItem('products')) || [];
         var product ={
+            id:Date.now(),
             productName:Name.value,
             photo:base64,
             ProductNumber:number.value,
@@ -91,7 +92,19 @@ btn.addEventListener('click',async (e) =>{
         localStorage.setItem('products',JSON.stringify(products))
         // console.log(products);
         location.href='dashboard.html'
-        
     }
+    
 })
+// load function to show categiries in select
+function loadCategories(){
+    var categories=JSON.parse(localStorage.getItem('categories') || '[]')
+    categories.map(category=>{
+        const cat=document.getElementById('category')
+        cat.innerHTML+=`
+        <option value="${category.id}">${category.nameOfCategory}</option>                   
+        `
+        console.log(category.nameOfCategory);
+    })
+}
+
 

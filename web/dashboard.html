@@ -27,6 +27,12 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="addCategory.html">Add category</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="categories.html">Categories</a>
+              </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -38,12 +44,13 @@
       <table class="table">
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Image</th>
             <th scope="col">Product Name</th>
             <th scope="col">Quantity</th>
             <th scope="col">price</th>
             <th scope="col">Category</th>
-            <th scope="col">update/remove</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody id="tbody">
