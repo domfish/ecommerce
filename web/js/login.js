@@ -40,7 +40,8 @@ function login(e) {
             alert('email ou mot de passe incorrecte ')
         }
         else {
-            location.href = 'index.html'
+            localStorage.setItem('authUser',JSON.stringify(userfound))
+            location.href = 'dashboard.html'
         }
     }
 }
